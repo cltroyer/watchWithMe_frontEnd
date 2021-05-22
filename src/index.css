@@ -5,9 +5,82 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: black ;
+  font-family: "f1";
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.loginImg {
+  width: 50%;
+}
+
+
+@font-face {
+  font-family: 'f1';
+  src: url('./Formula1-Regular.ttf') 
+}
+
+
+.bodylanding {
+
+  padding-left: 27%;
+  margin-top: 3%;
+}
+
+.h1landing  {
+  font-size: 40px;
+  margin: 0;
+}
+
+.h3landing {
+  text-align: center;
+}
+
+.containlanging {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  width: 60%;
+  padding-bottom: 3%;
+  border-radius: 3%;
+  outline: solid 5px white;
+  border: black 5px solid;
+}
+
+.hcontain {
+  display: flex;
+  flex-direction: row;
+}
+
+.loginImg {
+  width: 85%;
+}
+
+.landingbutton {
+  font-family: "f1";
+  width: 30%;
+  height: 40%;
+  font-size: 90%;
+  background: red;
+  border-radius: 20px;
+  border: none;
+  color:white
+}
+
+.mainInfo {
+  margin: 4%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.chat {
+  width: 60%;
+  height: 20%;
 }

@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Chatrm from "./Components/Chatrm";
+import Histdata from "./Components/Histdata";
+import { useAuth0 } from "@auth0/auth0-react";
+import LoginButton from "./Components/LoginButtion";
+import LogoutButton from "./Components/Logout";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { user, isAuthenticated } = useAuth0();
+
+  if (isAuthenticated === false) {
+    return (
+      <>
+        <div className="bodylanding">
+          <div className="containlanging">
+            <img src="f1_logo.png" alt="" srcset="" className="loginImg" />
+            <h1 className="h1landing">Welcome</h1>
+            <h3 className="h3landing">Please login to join the stream!</h3>
+            <LoginButton />
+          </div>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <div className="App">
+        <div className="hcontain">
+          <video width="66.6%" controls>
+            <source src="race.mp4" type="video/mp4" />
+          </video>
+          <div className="containlanging mainInfo">
+          <Histdata />
+          </div>
+        </div>
+        <div className="chat">
+          <Chatrm name={user.nickname} />
+        </div>
+        <LogoutButton />
+      </div>
+    );
+  }
 }
 
 export default App;
