@@ -85,7 +85,8 @@ const Histdata = () => {
         <ul>
           {race.map((round) => (
             <li>
-              {round.round} - <a href={round.Circuit.url}>{round.raceName}</a> -{round.date}
+              {round.round} - <a href={round.Circuit.url}>{round.raceName}</a> -
+              {round.date}
             </li>
           ))}
         </ul>

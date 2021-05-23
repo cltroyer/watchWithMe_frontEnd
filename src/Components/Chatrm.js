@@ -51,15 +51,16 @@ const Chatrm = (props) => {
   }, []);
 
   return (
-    <Chat client={chatClient} theme="livestream dark">
-      <Channel channel={channel}>
-        <Window>
-          <ChannelHeader live />
-          <VirtualizedMessageList />
-          <MessageInput Input={MessageInputSmall} focus />
-        </Window>
-      </Channel>
-    </Chat>
+    
+      <Chat client={chatClient} theme="livestream dark">
+        <Channel channel={channel}>
+          <Window>
+            <ChannelHeader live />
+            <VirtualizedMessageList />
+            <MessageInput Input={MessageInputSmall} focus />
+          </Window>
+        </Channel>
+      </Chat>
   );
 };
 export default Chatrm;

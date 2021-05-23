@@ -25,10 +25,8 @@ function App() {
     return (
       <div className="App">
         <div className="hcontain">
-          <video width="66.6%" controls>
-            <source src="race.mp4" type="video/mp4" />
-          </video>
-          <div className="containlanging mainInfo">
+          <iframe title="race" width="60%" src="//ok.ru/videoembed/2148962667076" frameborder="0" allow="autoplay" allowfullscreen/>
+          <div className="containinfo mainInfo">
           <Histdata />
           </div>
         </div>
